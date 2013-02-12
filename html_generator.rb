@@ -34,8 +34,11 @@ class HtmlGenerator
   end
 
   def show(product_id)
+    # Retrieve the specified product
+    product = retrieve_data("http://lcboapi.com/products/#{product_id}")
+
     print_header
-    puts "HtmlGenerator: show; id: #{product_id}"
+    puts "HtmlGenerator: show; id: #{product_id}; name: #{product['name']}"
     print_footer
   end
 

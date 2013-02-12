@@ -1,5 +1,13 @@
 if ARGV.empty?
   puts "Usage: ruby router.rb [action]"
 else
-  puts ARGV[0]
+  action = ARGV[0]
+
+  if action == "index"
+    puts "Action: index"
+  elsif action == "show"
+    puts "Action: show"
+  else
+    puts "Unknown action #{action}. Use index or show."
+  end
 end

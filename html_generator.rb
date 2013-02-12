@@ -33,9 +33,9 @@ class HtmlGenerator
     print_footer
   end
 
-  def show
+  def show(product_id)
     print_header
-    puts "HtmlGenerator: show"
+    puts "HtmlGenerator: show; id: #{product_id}"
     print_footer
   end
 

@@ -9,7 +9,12 @@ else
   if action == "index"
     generator.index
   elsif action == "show"
-    generator.show
+    product_id = ARGV[1]
+    if product_id.nil?
+      puts "Usage: ruby router.rb show [product_id]"
+    else
+      generator.show(product_id)
+    end
   else
     puts "Unknown action #{action}. Use index or show."
   end

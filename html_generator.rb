@@ -2,9 +2,9 @@ require 'json'
 require 'open-uri'
 
 class HtmlGenerator
-  def index
+  def index(search_text)
     # Retrieve the list of products
-    products = retrieve_data("http://lcboapi.com/products")
+    products = retrieve_data("http://lcboapi.com/products?q=#{search_text}")
 
     print_header
 

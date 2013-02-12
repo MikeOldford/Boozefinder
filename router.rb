@@ -7,7 +7,8 @@ else
   generator = HtmlGenerator.new
 
   if action == "index"
-    generator.index
+    search_text = ARGV[1]
+    generator.index(search_text)
   elsif action == "show"
     product_id = ARGV[1]
     if product_id.nil?

@@ -8,12 +8,19 @@ class HtmlGenerator
 
     print_header
 
+    puts "<h1>All products</h1>"
+
     # Loop over the products, printing each one
     products.each do |product|
+      puts "<div class='product'>"
       puts product["name"]
-      puts "<br/>"
+      puts "</div>"
     end
     
+    puts "<footer>"
+    puts "  For more info see the <a href='http://lcboapi.com/docs/products'>products API docs</a>."
+    puts "</footer>"
+
     print_footer
   end
 
@@ -27,6 +34,8 @@ class HtmlGenerator
     puts "<html>"
     puts "  <head>"
     puts "    <title>Connoisseur</title>"
+    puts "    <link rel='stylesheet' href='normalize.css' type='text/css'>"
+    puts "    <link rel='stylesheet' href='styles.css' type='text/css'>"
     puts "  </head>"
     puts "  <body>"
   end

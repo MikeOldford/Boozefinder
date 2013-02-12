@@ -4,5 +4,17 @@ body {
 
 .product {
   margin-bottom: 20px;
+  overflow: auto;
+  width: 100%;
 }
 
+.product-thumbnail {
+  float: left;
+  width: 234px;
+  height: 188px;
+  margin-right: 20px;
+}
+
+.product-data {
+  list-style-type: none;
+}
